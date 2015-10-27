@@ -1,0 +1,50 @@
+-Create a window for words to be produced
+-Create a timer and quit button in window
+    -Use code from BubblePop.py
+-Create buttons for timed or word count
+-Assign point value to larger words
+    -based on the characters in a word, you get a certain amount of points
+-The below code is an attempt to get a window to pop up. Needs plenty of work. Feel free to adjust.
+
+
+
+#global wn
+# global text
+# quit_box=turtle.Turtle
+#
+# text= turtle.Turtle()
+# def handler_quit(x, y):
+#         '''called by pressing quit_box turtle to quit'''
+#
+#         text.clear()
+#         text.setposition(-20,-260)
+#         text.write("Quitting",move=False,align='center',font=("Arial",30,("bold","normal")))
+#         time.sleep(1)
+#         wn.bye()
+#         #print ('Your final score is:\t'+str(score)+' points!\nThank you for playing!')
+#         time.sleep(2)
+#         #sys.exit(0)
+
+
+# den=turtle.Turtle()
+# wn=turtle.Screen()
+# den.hideturtle()
+# wn.listen()
+# while True:
+#             #Creates a timer within the turtle window
+#             clock=turtle.Turtle()
+#             clock.shape('blank')
+#             clock.penup()
+#             clock.setpos(-280,-250)
+#             clock.pendown()
+#             global seconds
+#             seconds=61
+#
+#             for i in range(seconds):
+#                 seconds-=1
+#                 clock.write('Time:  '+str(seconds),font=("Arial",15,("bold","normal")))
+#                 time.sleep(1)
+#                 clock.clear()
+#
+#                 #Handler commands for clicking on turtles boxes
+#                 quit_box.onclick(handler_quit)

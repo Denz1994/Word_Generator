@@ -1,3 +1,4 @@
+-Make file an functional executable (.exe)
 -Create a window for words to be produced
 -Create a timer and quit button in window
     -Use code from BubblePop.py

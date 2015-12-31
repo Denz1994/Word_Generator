@@ -22,7 +22,7 @@ def main():
     #Propmted if you would like to rhyme for a timed amount.
     timed=input("Would you like to rhyme on a timer?\n\n")
     def timed_rhyme(x,timed):
-        if timed.lower()=="yes":
+        if timed.lower()=="yes":            #Timed case
             timed=input("How long would you like to go?\nType in your time like this:   minutes:seconds\t\n\n")
             minutes,seconds=timed.split(":")
             print ("You have",minutes,"minute and",seconds," seconds on the clock.")
@@ -67,7 +67,7 @@ def main():
     #======================================================================================================================
     #NON TIMED RHYME
     cypher=timed_rhyme(x,timed)
-    if cypher==1:
+    if cypher==1:           #No time case
         print ("Okay, the words won't stop coming. Have fun!\n\n")
 
         delay=input("How many seconds would you like in between each word?\n\n")
@@ -75,11 +75,12 @@ def main():
         ready=input("Start your beat. The first word will appear when you press enter.")
 
         #=======================================================================================================================
-            #Turtle Implementation
+        #Turtle Implementation
 
         rapper=turtle.Turtle()
         wn=turtle.Screen()
         wn.bgcolor("black")
+
 
 
         #=======================================================================================================================
@@ -90,7 +91,9 @@ def main():
             print (random_word[0])
             rapper.write(random_word[0])
             time.sleep(int(delay))
-    if cypher==2:
+    #======================================================================================================================
+    #Exception Handler
+    if cypher==2:           #If user choses niether yes or no then prompt program to restart.
         print('press shift+F10')
         timed_rhyme(x,timed)
     #======================================================================================================================

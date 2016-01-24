@@ -2,10 +2,8 @@ def main():
     import random
     import time
     import turtle
-
-#Todo:Add instructions
-#Todo:delay time cannot be a float value only integer
-#Todo:Add comments
+#
+#Todo:Change instructions on line 41
 
     #=======================================================================================================================
     #Opens file and reads lines into list

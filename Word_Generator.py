@@ -11,11 +11,11 @@ def main():
         lines=f.read().splitlines()
 
     x = [[i] for i in (lines)]
-    print ("\n\nWelcome to I-CHYPHER,this is an early alpha version. \nThanks for using and have fun.")
+    print ("\n\nWelcome to I-CYPHER,this is an early alpha version. \nThanks for using and have fun.")
     #=======================================================================================================================
     #INSTRUCTIONS:
 
-    instruction=input("Would you like to read the instructions?\nType: Yes/No\n")
+    instruction=str(raw_input("Would you like to read the instructions?\nType: Yes/No\n"))
 
     if instruction.lower()=="yes":
         print("\n\n\nThis is a tool for you to practice quick thinking and witty creativity.\nYou will be prompted with a series of words."
@@ -33,14 +33,14 @@ def main():
     #=======================================================================================================================
     #TIMED RHYME
     #Propmted if you would like to rhyme for a timed amount.
-    timed=input("Would you like to rhyme on a timer?\n\n")
+    timed=raw_input("Would you like to rhyme on a timer?\n\n")
     def timed_rhyme(x,timed):
         if timed.lower()=="yes":            #Timed case
-            timed=input("How long would you like to go?\nFor example if you want 2 minutes and 30 seconds type:\t2:30\t\n\n")
+            timed=raw_input("How long would you like to go?\nFor example if you want 2 minutes and 30 seconds type:\t2:30\t\n\n")
             minutes,seconds=timed.split(":")
-            print ("You have",minutes,"minute and",seconds," seconds on the clock.")
+            print ('You have '+ str(minutes)+' minute(s) and '+ str(seconds) + ' second(s) on the clock.')
             time.sleep(1)
-            delay=input("How many seconds would you like in between each word?\n\n")
+            delay=raw_input("How many seconds would you like in between each word?\n\n")
 
 
             #=======================================================================================================================
@@ -54,13 +54,13 @@ def main():
             rapper.shape("blank")
             #=======================================================================================================================
 
-            ready=input("Start your beat and open the new window created. The first word will appear when you press enter.\n\n")
+            ready=raw_input("Start your beat and open the new window created. The first word will appear when you press enter.\n\n")
             sec=(int(minutes)*60)+(int(seconds))
             t0=time.time()
 
             while ready=='' and sec!=0:
                 random_word= random.choice(x)
-                print ('\n\n\n\n\n',random_word[0])
+                # print ('\n\n\n\n\n',random_word[0])
                 #Time for the word to appear.
                 rapper.write(random_word[0],False,"center", ("Arial",40,"bold"))
                 time.sleep(int(delay))
@@ -76,7 +76,7 @@ def main():
                 # elif total_time==10 or total_time<10:
                 #     print "10 seconds left"
                 rapper.clear()
-                #wn.exitonclick()
+                # wn.exitonclick()
         elif timed.lower()=="no":
             return 1
         elif timed.lower()!="yes" or timed.lower()!="no":
@@ -89,7 +89,7 @@ def main():
     if cypher==1:           #No time case
         print ("Okay, the words won't stop coming. Have fun!\n\n")
 
-        delay=input("How many seconds would you like in between each word?\n\n")
+        delay=raw_input("How many seconds would you like in between each word?\n\n")
 
 
     #=======================================================================================================================
@@ -105,13 +105,13 @@ def main():
 
     #=======================================================================================================================
 
-        ready=input("Start your beat. The first word will appear when you press enter.")
+        ready=raw_input("Start your beat. The first word will appear when you press enter.")
 
         while ready=='':
             #Picks a random word
 
             random_word= random.choice(x)
-            print (random_word[0])
+            # print (random_word[0])
             rapper.write(random_word[0],False,"center", ("Arial",40,"bold"))
             time.sleep(int(delay))
             rapper.clear()
